@@ -1,47 +1,43 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
 public class Solution {
-    public static void main(String args[] ) throws Exception {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     
     	Scanner sc = new Scanner(System.in);
-    	int N, B;
-    	N = sc.nextInt(); // num of Cities
-    	B = sc.nextInt(); // num of clinics
-    	int[] popul = new int[N];
-    	int[] clinics = new int[N];
-
-    	for(int i = 0; i < N; i++)
-    	{
-    		popul[i] = sc.nextInt();
-    	}
-    	int maxAvg = Integer.MIN_VALUE;
-    	int cnt = 0;
-		while(cnt <= B)
-		{
-			for(int i=0; i<N; i++)
-			{
-				int cl = clinics[i];
-				int avg = popul[i] /(cl+1);
-				if(avg >= maxAvg)
-				{
-					clinics[i] += 1;
-					cnt += 1;
-					maxAvg = popul[i] / (clinics[i]+1);					
-
-				}
-			}
-		}
-		maxAvg = 0;
-		for(int i = 0 ; i < N; i++)
-		{
-			int v = popul[i] / clinics[i];
-			if (maxAvg <= v)
-				maxAvg = v;
-		}
     	
+    	int T;
+    	T = sc.nextInt();
+    	for(int i = 0 ; i <T; ++i)
+    	{
+    		char[] inputA = sc.nextLine().toCharArray();
+    		char[] inputB = sc.nextLine().toCharArray();
+    		int k,j;k=0;j=0;
+            boolean find=false;
+    		for( k=0 ; k < inputA.length ; k++ )
+    		{
+    			for( j=0; j < inputB.length; j++)
+    			{
+    				if(inputA[k] == inputB[j])
+    				{
+    					k = inputA.length;
+                        j = inputB.length;
+                        find = true;
+    				    break;
+    				}
+    			}
+    		}
+    		if(find)
+                System.out.println("YES");
+            else
+    			System.out.println("NO");
+    	}
     	sc.close();
-    	System.out.println(maxAvg);
-    }
     
+    }
 }
