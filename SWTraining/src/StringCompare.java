@@ -44,6 +44,8 @@ public class StringCompare {
             String _a = in.nextLine();
             res = stringSimilarity(_a);
             System.out.println(res);
+            
+            
         }
     }
 }

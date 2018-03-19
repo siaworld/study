@@ -39,6 +39,7 @@ class ListNode {
 	}
 }
 
+/*
 class Solution {
 	public static void main(String args[]) throws Exception {
 		Scanner sc = new Scanner(System.in);
@@ -60,4 +61,4 @@ class Solution {
 		}
 		sc.close();
 	}
-}
+}*/
