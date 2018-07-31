@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 class BFS {
 	static final int MAX_VERTEX = 30;
@@ -8,12 +9,16 @@ class BFS {
 	static int rear, front;
 	static void breadthFirstSearch(int vertex) {
 		visit[vertex] = 1; 
-		System.out.print(vertex + " "); 
+		System.out.print(vertex + " ");
+		ArrayList<Integer> vis = new ArrayList<>();
+
+
 		queue[rear++] = vertex;
 		while (front < rear) {
-			vertex = queue[front++];
+			vertex = queue[front++]; //dequeue;
+
 			for (int i = 1; i <= num; i++) {
-				if (map[vertex][i] == 1 && visit[i] == 0) {
+				if (map[vertex][i] == 1 && visit[i] == 0) { //reachable but not visit yet
 					visit[i] = 1;
 					System.out.printf("%d ", i); 
 					queue[rear++] = i;

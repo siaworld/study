@@ -11,6 +11,10 @@ public class StringCompare {
     	int n = a.length();
     	long result = (long)n;
         List<Integer> z = new ArrayList<Integer>();
+        String[] a = new String[]{"a", "b", "c"};
+        Arrays.sort(a);
+
+
         
         int i,l,r;i=0;l=0;r=0;
         z.add(0);

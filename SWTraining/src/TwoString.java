@@ -38,6 +38,9 @@ public class TwoString {
             else
     			System.out.println("NO");
     	}
+    	BigInteger bi = new BigInteger("123242435");
+    	bi = BigInteger.valueOf(12);
+
     	sc.close();
     
     }
