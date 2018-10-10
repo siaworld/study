@@ -1,3 +1,4 @@
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
@@ -7,8 +8,8 @@ public class MyPriorityQueue {
 	public static void main(String[] args){
 		ContactComparator cComparator = new ContactComparator();
 		
-		PriorityQueue<Contact> myQueue = new PriorityQueue<Contact>(10, cComparator);
-		
+		//PriorityQueue<Contact> myQueue = new PriorityQueue<Contact>(10, cComparator);
+		PriorityQueue<Contact> myQueue = new PriorityQueue<Contact>(10);
 		Contact one = new Contact();
 		one.setName("bhj");
 		one.setPhoneNumber("12345");
@@ -27,7 +28,7 @@ public class MyPriorityQueue {
 		
 	}
 }
-class Contact{
+class Contact implements Comparable<Contact>{
 	String name;
 	String phoneNumber;
 	
@@ -43,7 +44,11 @@ class Contact{
 	void setPhoneNumber(String number){
 		this.phoneNumber = number;
 	}
-	
+
+	@Override
+	public int compareTo(Contact o) {
+		return this.getPhoneNumber().compareTo(o.getPhoneNumber());
+	}
 }
 class ContactComparator implements Comparator<Contact>{
 
@@ -51,5 +56,7 @@ class ContactComparator implements Comparator<Contact>{
 	public int compare(Contact o1, Contact o2) {		
 		return o1.getPhoneNumber().compareTo(o2.getPhoneNumber());
 	}
+
+
 	
 }

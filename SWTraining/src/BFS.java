@@ -12,7 +12,6 @@ class BFS {
 		System.out.print(vertex + " ");
 		ArrayList<Integer> vis = new ArrayList<>();
 
-
 		queue[rear++] = vertex;
 		while (front < rear) {
 			vertex = queue[front++]; //dequeue;

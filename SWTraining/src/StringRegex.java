@@ -55,6 +55,13 @@ public class StringRegex {
                 wordMap.put(word, cnt+1);
 
             }
+            Hashtable<String, Integer> ht = new Hashtable<>();
+            HashMap<String, Integer> hm = new HashMap<>();
+            String str=new String("anb");
+
+
+
+
 
         }
 
@@ -72,9 +79,10 @@ public class StringRegex {
 
 
         System.out.println(topTen.toString());
-        List<Integer> numList = new LinkedList<>();
+        ArrayList<Integer> numList = new ArrayList<>();
         for(String s : token)
             System.out.println(s + " ");
+
 
 
 

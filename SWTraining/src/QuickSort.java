@@ -32,7 +32,7 @@ public class QuickSort {
 		//sort(numbs, 0,7);
 		//Arrays.sort(numbs);
 		List<Integer> numList = Arrays.asList(1,2,3,4,5);
-
+        ArrayList<Integer> ny;
 		HashMap<String, Integer> myMap = new HashMap<>();
 		myMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder());
 
@@ -55,12 +55,18 @@ public class QuickSort {
 		System.out.println("end");
 		//System.out.println(numList.toString());
 		Arrays.sort(numbs);
-		
+		Iterator<String> it = test.iterator();
+
 		for(int i = 0 ; i < numbs.length;i++)
 			System.out.println(numbs[i]);
 		//ArrayList<Character> charList = new ArrayList<Character>();
-		
-		
+
+		java.util.Queue<String> mq = new LinkedList<String>();
+
+
+
+
+
 
 
 
