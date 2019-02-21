@@ -21,7 +21,8 @@ public class StringRegex {
 
         List<String> listNames = Arrays.asList("Zero", "Alice", "Bob", "Cole", "Dale", "Eric", "Frank");
         String[] nameArray = new String[]{"Zero", "Alice", "Bob", "Cole", "Dale", "Eric", "Frank"};
-        Arrays.sort(nameArray);
+        Arrays.sort(nameArray, Collections.reverseOrder());
+
         Arrays.asList(nameArray);
 
 
@@ -68,6 +69,7 @@ public class StringRegex {
         HashMap<String, Integer> topTen = wordMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, HashMap::new));
 
+        topTen.computeIfPresent("abc", (e,v) -> v+1);
 
             wordMap.entrySet().stream()
                         .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
@@ -80,6 +82,9 @@ public class StringRegex {
 
         System.out.println(topTen.toString());
         ArrayList<Integer> numList = new ArrayList<>();
+        Arrays.sort(token, Comparator.reverseOrder());
+
+
         for(String s : token)
             System.out.println(s + " ");
 

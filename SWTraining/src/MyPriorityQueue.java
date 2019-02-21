@@ -18,7 +18,7 @@ public class MyPriorityQueue {
 		two.setPhoneNumber("4321");
 		myQueue.add(one);
 		myQueue.add(two);
-		
+
 		Iterator<Contact> it = myQueue.iterator();
 		while(it.hasNext()){
 			Contact c = it.next();

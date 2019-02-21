@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 class PermComb {
@@ -34,7 +37,10 @@ class PermComb {
 	
 	static void push(char ch) { 
 		combinationStack[stackTop++] = ch; 
-		combinationStack[stackTop] = '\0'; 
+		combinationStack[stackTop] = '\0';
+		List<Character> result = new ArrayList<Character>();
+		result = Arrays.asList(combinationStack);
+
 	}
 	
 	static void pop() {

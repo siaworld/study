@@ -4,6 +4,8 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+import static java.lang.Math.max;
+
 public class Knapsack {
 
     public static void main(String[] args) {
@@ -16,7 +18,8 @@ public class Knapsack {
     	int[] element; 
     	
     	int[] memEval;
-    	
+    	max(1,2);
+
     	for(int i = 0; i < T; i++)
     	{
     		N = sc.nextInt();
@@ -36,7 +39,7 @@ public class Knapsack {
     			{
     				if(element[j] <= weight)
     				{
-    					memEval[weight] = Math.max(memEval[weight],(element[j] + memEval[weight - element[j]]));
+    					memEval[weight] = max(memEval[weight],(element[j] + memEval[weight - element[j]]));
     				}
     				
     			}
